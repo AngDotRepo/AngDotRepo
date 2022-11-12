@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SearchFilterPipe } from './search-filter.pipe';
 
 import { MyCustomFilterPipe } from './my-custom.filter';
+import { ExampledropdownComponent } from './exampledropdown/exampledropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchFilterPipe,
-    MyCustomFilterPipe
+    MyCustomFilterPipe,
+    ExampledropdownComponent
   ],
   imports: [
     BrowserModule,

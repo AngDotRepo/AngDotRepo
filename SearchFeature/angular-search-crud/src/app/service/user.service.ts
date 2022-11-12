@@ -52,4 +52,8 @@ getLocationNamesDropDown(): Observable<any> {
                         map(res=> res)
                         );
                     }
+
+                    getDepList():Observable<any[]>{
+                        return this.http.get<any>(`${this.orderurl}/GetLocationNamesDropDown`);
+                        }
     }
