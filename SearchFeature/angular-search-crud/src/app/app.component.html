@@ -1,0 +1,51 @@
+<div class="topnav">
+  <a class="active">Home</a>
+</div>
+<br>
+<br>
+
+
+
+
+<div>
+  <div><h3>Search only location names here</h3></div>
+  <input type="text" placeholder="type here..."  [(ngModel)] = "searchText" style="margin: 0px auto;">
+
+
+  <table class="styled-table" style="margin: 90px auto;">
+    <thead>
+      <tr>
+          <th>ID </th>
+          <th>OrderStatus </th>
+          <th>OrderProvince </th>
+          <th>LocationName </th>
+       
+          <!-- <th>ID </th>
+          <th>OrderStatus </th>
+          <th>OrderProvince </th> -->
+      </tr>
+    </thead>
+      <tbody>
+      <!-- <tr *ngFor="let post of posts$"> -->
+
+      <tr class="active-row" *ngFor="let order of orders$ | searchFilter:searchText" >
+     
+          <!-- <td>{{post.id}} </td>
+          <td>{{post.title}} </td>
+          <td>{{post.author}} </td> -->
+         
+          
+          <td>{{order.id}} </td>
+          <td>{{order.orderStatus}} </td>
+          <td>{{order.orderProvince}} </td> 
+          <td>{{order.locationName}} </td> 
+      </tr>   
+      <p  class= "p-tag" *ngIf="posts$.length === 0" >No records found</p> 
+     
+
+    </tbody> 
+  </table>
+
+  
+
+  </div>
