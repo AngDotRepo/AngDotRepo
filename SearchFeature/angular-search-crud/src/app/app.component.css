@@ -102,3 +102,15 @@
     color:red;
     margin: 10px auto;
   }
+
+  .theme-construction {
+    --radius: 0;
+    --baseFg: white;
+    --baseBg: black;
+    --accentFg: black;
+    --accentBg: orange;
+  }
+
+  .dropdown-content {
+    right: 0;
+  }

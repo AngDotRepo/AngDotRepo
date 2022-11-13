@@ -4,15 +4,23 @@
 <br>
 <br>
 
-
-
-
 <div>
   <div><h3 >Search only location names here</h3></div>
   <input type="text" placeholder="type here..."  [(ngModel)] = "searchText" style="margin: 0px auto;">
+  <br>
+  <br>
+  
+  <div><h3 style="margin-left: 515px">Select only location names below</h3></div>
+  <div class="col-sm-10">
+    <select name="Location" class="dropdown-content" style="margin-left: 605px">
+      <option>--Select--</option>
+      <option *ngFor="let dep of dropDown$">
+        {{dep.locationName}}
+      </option>
+    </select>
+  </div>
 
-
-  <table class="styled-table" style="margin: 90px auto;">
+  <table class="styled-table" style="margin: 40px auto;">
     <thead>
       <tr>
           <th>ID </th>
@@ -28,13 +36,13 @@
       <tbody>
       <!-- <tr *ngFor="let post of posts$"> -->
 
-      <tr class="active-row" *ngFor="let order of orders$ | searchFilter:searchText" >
-     
-          <!-- <td>{{post.id}} </td>
+      <tr class="active-row" *ngFor="let order of orders$ | searchFilter:searchText | myCustomFilter:dropDown$" >
+      <!-- <tr class="active-row" *ngFor="let order of orders$ | searchFilter:searchText | myCustomFilter:(selectDataComp.selectedValues$ | async)" > -->
+
+        <!-- <td>{{post.id}} </td>
           <td>{{post.title}} </td>
           <td>{{post.author}} </td> -->
-         
-          
+                  
           <td>{{order.id}} </td>
           <td>{{order.orderStatus}} </td>
           <td>{{order.orderProvince}} </td> 
@@ -45,7 +53,4 @@
 
     </tbody> 
   </table>
-
-  
-
   </div>

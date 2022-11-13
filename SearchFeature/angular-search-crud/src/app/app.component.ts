@@ -16,6 +16,7 @@ export class AppComponent {
   dropDown$:  IOrderDropDown[]= [];
   title = 'angular-search-crud';
   searchText: string | undefined;
+  selectDataComp : string | undefined;
   constructor(public userService : UserService){
   }
   
@@ -25,9 +26,9 @@ export class AppComponent {
       this.orders$ = res;
       });
 
-      this.userService.getLocationNames().subscribe(res => { 
-        this.searchOrders$ = res;
-        });
+      // this.userService.getLocationNames().subscribe(res => { 
+      //   this.searchOrders$ = res;
+      //   });
 
         this.userService.getLocationNamesDropDown().subscribe(res => { 
           this.dropDown$ = res;
@@ -38,5 +39,6 @@ export class AppComponent {
       //   console.log(this.orders$);
       //   console.log(this.posts$);
       //   });
+      
   }
 }

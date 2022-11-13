@@ -10,7 +10,7 @@ namespace AzureCosmosEFCoreCRUD.Models
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "locationname")]
+        [JsonProperty(PropertyName = "locationName")]
         public string LocationName { get; set; }
     }
 }
