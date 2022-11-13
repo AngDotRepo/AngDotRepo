@@ -114,3 +114,7 @@
   .dropdown-content {
     right: 0;
   }
+
+  p.mission.selected {
+    background-color:#F0F;
+  }

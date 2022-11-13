@@ -16,7 +16,6 @@ export class AppComponent {
   dropDown$:  IOrderDropDown[]= [];
   title = 'angular-search-crud';
   searchText: string | undefined;
-  selectDataComp : string | undefined;
   constructor(public userService : UserService){
   }
   
@@ -39,6 +38,10 @@ export class AppComponent {
       //   console.log(this.orders$);
       //   console.log(this.posts$);
       //   });
+
+      let value = (<HTMLSelectElement>document.getElementById('dropdown-content')).value;
+
+      console.log(value);
       
   }
 }

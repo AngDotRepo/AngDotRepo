@@ -107,8 +107,8 @@ namespace AzureCosmosEFCoreCRUD.Controllers
             {
                 List<ItemList> itemListss = new List<ItemList>{
                    new ItemList{Id = "1", LocationName = "Germany"},
-                   new ItemList{Id = "2", LocationName = "France"},
-                   new ItemList{Id = "3", LocationName = "Canada"},
+                   new ItemList{Id = "2", LocationName = "Japan"},
+                   new ItemList{Id = "3", LocationName = "UK"},
                    new ItemList{Id = "4", LocationName = "Costa Rica"}
                    };
 
