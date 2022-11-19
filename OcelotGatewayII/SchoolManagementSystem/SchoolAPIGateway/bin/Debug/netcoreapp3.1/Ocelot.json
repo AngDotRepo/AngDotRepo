@@ -2,11 +2,11 @@
   "ReRoutes": [
     {
       "DownstreamPathTemplate": "/api/StudentAttendance",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44317
+          "Port": 44366
         }
       ],
       "UpstreamPathTemplate": "/apigateway/AttendanceService",
@@ -14,11 +14,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/StudentAdmission",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44381
+          "Port": 44355
         }
       ],
       "UpstreamPathTemplate": "/apigateway/AdmissionService",
