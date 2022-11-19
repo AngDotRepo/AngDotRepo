@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44317
+          "Port": 44366
         }
       ],
       "UpstreamPathTemplate": "/apigateway/AttendanceService",
@@ -18,7 +18,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44381
+          "Port": 44355
         }
       ],
       "UpstreamPathTemplate": "/apigateway/AdmissionService",
