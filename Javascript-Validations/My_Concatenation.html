@@ -20,6 +20,11 @@ opacity: 1;
 .blink_off {
 opacity: 0;
 }
+#button {
+  position: fixed; /* or position: absolute; */
+    top: 10;
+    right: 0;
+ }
 </style>
 </head>
 <body>
@@ -30,6 +35,8 @@ opacity: 0;
   <input type="text" id="fname" name="fname"><br><br>
   <label for="lname">Last name:</label><br><br>
   <input type="text" id="lname" name="lname"><br><br>
+
+  <div><input id="button" type="button" value="ExportToCSV"></div>
 
   <label for="userid">User Id:</label><br><br>
   <input type="text" id="userid" name="userid" readonly><br><br>
@@ -46,9 +53,6 @@ onclick = "consumingFunc();">
 <button type="button" onclick="ClearFields();">Clear</button>
 
 <p id="demo" name="demoname"></p><br><br>
-
-
-
 
 <script>
 function myConcatenation()
