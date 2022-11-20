@@ -13,7 +13,13 @@
   color: black;
   padding: 40px;
   text-align: center;
-} 
+}
+.blink_on {
+opacity: 1;
+}
+.blink_off {
+opacity: 0;
+}
 </style>
 </head>
 <body>
@@ -25,11 +31,23 @@
   <label for="lname">Last name:</label><br><br>
   <input type="text" id="lname" name="lname"><br><br>
 
-<input type="submit"
-onclick="document.getElementById('demo').innerHTML = myConcatenation()">
+  <label for="userid">User Id:</label><br><br>
+  <input type="text" id="userid" name="userid" readonly><br><br>
+  <label for="id">Id:</label><br><br>
+  <input type="text" id="id" name="id" readonly><br><br>
+
+  <label for="title">Title:</label><br><br>
+  <input type="text" id="title" name="title" readonly><br><br>
+  <label for="completed">Completed:</label><br><br>
+  <input type="text" id="completed" name="completed" readonly><br><br>
+
+  <input type="submit"
+onclick = "consumingFunc();">
 <button type="button" onclick="ClearFields();">Clear</button>
 
 <p id="demo" name="demoname"></p><br><br>
+
+
 
 
 <script>
@@ -58,14 +76,34 @@ return fullName;
 
 function ClearFields() 
 {
-
-  if(document.getElementsByName('fname')[0].value==="") {alert("Nothing To Clear On FirstName");}
-
-  if(document.getElementsByName('fname')[0].value==="") {alert("Nothing To Clear On LastName");}
-
   document.getElementsByName('fname')[0].value = "";
   document.getElementsByName('lname')[0].value = "";
+  document.getElementsByName('userid')[0].value = "";
+  document.getElementsByName('id')[0].value = "";
+  document.getElementsByName('title')[0].value = "";
+  document.getElementsByName('completed')[0].value = "";
   document.getElementById('demo').innerHTML = "";
+}
+
+async function consumingFunc() {
+  let obj;
+
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/2')
+
+  obj = await res.json();
+
+  document.getElementsByName('userid')[0].value = obj.userId;
+  document.getElementsByName('id')[0].value = obj.id;
+  document.getElementsByName('title')[0].value = obj.title;
+  document.getElementsByName('completed')[0].value = obj.completed;
+
+  var fnametextBox = document.getElementById('fname');
+    if (fnametextBox.value == "")
+        return false;
+  
+  var lnametextBox = document.getElementById('lname');
+    if (lnametextBox.value == "")
+        return false;
 }
 
 </script>
