@@ -7,36 +7,39 @@
   color: black;
   padding: 40px;
   text-align: center;
-} 
+}
+body {
+  font-family: sans-serif;
+}
 #demo {
   background-color: lightblue;
   color: black;
   padding: 40px;
   text-align: center;
 }
-.blink_on {
-opacity: 1;
-}
-.blink_off {
-opacity: 0;
-}
 #button {
   position: fixed; /* or position: absolute; */
     top: 10;
     right: 0;
  }
+ 
+table, td, th {
+  border: 5px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 </style>
 </head>
 <body>
+  <div class="container">
 
 <h1 id="myHeader">My Concatenation</h1>
-
-  <label for="fname">First name:</label><br><br>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label><br><br>
-  <input type="text" id="lname" name="lname"><br><br>
-
-  <div><input id="button" type="button" value="ExportToCSV"></div>
 
   <label for="userid">User Id:</label><br><br>
   <input type="text" id="userid" name="userid" readonly><br><br>
@@ -51,8 +54,48 @@ opacity: 0;
   <input type="submit"
 onclick = "consumingFunc();">
 <button type="button" onclick="ClearFields();">Clear</button>
+<button onclick="toggleTable()">Show Table ?</button><br><br>
 
-<p id="demo" name="demoname"></p><br><br>
+<p id="demo"></p>
+
+<table id="myTable">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+
 
 <script>
 function myConcatenation()
@@ -80,8 +123,6 @@ return fullName;
 
 function ClearFields() 
 {
-  document.getElementsByName('fname')[0].value = "";
-  document.getElementsByName('lname')[0].value = "";
   document.getElementsByName('userid')[0].value = "";
   document.getElementsByName('id')[0].value = "";
   document.getElementsByName('title')[0].value = "";
@@ -110,8 +151,19 @@ async function consumingFunc() {
         return false;
 }
 
-</script>
+function toggleTable() {
+  var x = document.getElementById("myTable");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else { 
+    x.style.display = "none";
+  }
 
+  document.getElementById('demo').innerHTML = "Table";
+}
+
+</script>
+  </div>
 </body>
 </html> 
 
