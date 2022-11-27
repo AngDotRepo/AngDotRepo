@@ -1,5 +1,4 @@
 ﻿using ETLAPIFramework.ConsoleApp.Data.Common;
-using ETLAPIFramework.ConsoleApp.Data.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -17,7 +16,6 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
     {
         public static void GetAPIRequest(string url)
         {
-            List<CommonModel> list = new List<CommonModel>();
 
             Console.WriteLine("Making API Call...");
 
@@ -52,7 +50,7 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
 
                 ConvertListObjectToDataTable listtodt = new ConvertListObjectToDataTable();
 
-                var users = MyDynamic[5];
+                var users = MyDynamic[0];
 
                 var jTokens = users.Children();
 

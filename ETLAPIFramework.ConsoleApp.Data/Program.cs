@@ -11,8 +11,10 @@ namespace ETLAPIFramework.ConsoleApp.Data
 
             List<string> urllist = new List<string>();
 
-            urllist.Add("https://jsonplaceholder.typicode.com/todos");
-            urllist.Add("https://fakestoreapi.com/products");
+            Dictionary<string, string> urlTableList = new Dictionary<string, string>();
+
+            urlTableList.Add("https://jsonplaceholder.typicode.com/todos/1","dbo.testtodos");
+            urlTableList.Add("https://fakestoreapi.com/products/1","dbo.testproducts");
 
             foreach (string url in urllist)
             {
