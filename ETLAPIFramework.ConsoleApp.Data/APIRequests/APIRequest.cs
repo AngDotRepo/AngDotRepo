@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Dynamic;
 using System.Linq;
 using System.Net;
@@ -51,60 +52,117 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
 
                 ConvertListObjectToDataTable listtodt = new ConvertListObjectToDataTable();
 
-                var users = MyDynamic[0];
+                var users = MyDynamic[5];
 
                 var jTokens = users.Children();
 
-                //DataTable dtrefined = new DataTable();
-
                 List<string> stringlists = new List<string>();
 
-                List<Dictionary<string, string>> EmployeeList = new List<Dictionary<string, string>>();
+                Dictionary<string, string> EmployeeList = new Dictionary<string, string>();
 
                 foreach (var str in jTokens)
                 {
-                    foreach (var keyValuePairs in EmployeeList)
-                    {
-                        //DataColumn dc = new DataColumn(str.Name, typeof(string));
-                        //DataRow dr = dt.NewRow();
-                        //dt.Columns.Add(dc);
-                        //dr[str.Name] = str.Value;
+                    string strname = str.Name;
+                    string strvalue = str.Value.ToString();
 
-                        //dt.Rows.Add(dr);//this will add the row at the end of the datatable
-
-                        string strr = str.Name;
-                        string strvalue = str.Value;
-
-                        keyValuePairs.Add(strr, strvalue);
-                    }
-
+                    EmployeeList.Add(strname, strvalue);
                 }
 
                 //DataTable dt = listtodt.ToDataTable(list);
 
                 dt = ToDictionary(EmployeeList);
 
-                loadDataTableToSQL.DeleteRecords("[dbo].[test]");
+                string tableName = CreateTABLE("[dbo].[testtable]", dt);
 
-                loadDataTableToSQL.BulkInsert(dt, "[dbo].[test]");
+                CreateTABLEScript(tableName);
+
+                loadDataTableToSQL.DeleteRecords("[dbo].[testtable]");
+
+                loadDataTableToSQL.BulkInsert(dt, "[dbo].[testtable]");
 
             }
         }
-
-
-        public static DataTable ToDictionary(List<Dictionary<string, string>> list)
+        public static DataTable ToDictionary(Dictionary<string, string> list)
         {
             DataTable result = new DataTable();
             if (list.Count == 0)
                 return result;
 
             result.Columns.AddRange(
-                list.First().Select(r => new DataColumn(r.Key)).ToArray()
+                list.Select(r => new DataColumn(r.Key)).ToArray()
             );
 
-            list.ForEach(r => result.Rows.Add(r.Select(c => c.Value).Cast<object>().ToArray()));
+            result.Rows.Add(list.Select(r => new DataColumn(r.Value)).ToArray());
 
             return result;
+        }
+
+        public static string CreateTABLE(string tableName, DataTable table)
+        {
+            string sqlsc;
+            sqlsc = "CREATE TABLE " + tableName + "(";
+            for (int i = 0; i < table.Columns.Count; i++)
+            {
+                sqlsc += "\n [" + table.Columns[i].ColumnName + "] ";
+                string columnType = table.Columns[i].DataType.ToString();
+                switch (columnType)
+                {
+                    case "System.Int32":
+                        sqlsc += " int ";
+                        break;
+                    case "System.Int64":
+                        sqlsc += " bigint ";
+                        break;
+                    case "System.Int16":
+                        sqlsc += " smallint";
+                        break;
+                    case "System.Byte":
+                        sqlsc += " tinyint";
+                        break;
+                    case "System.Decimal":
+                        sqlsc += " decimal ";
+                        break;
+                    case "System.DateTime":
+                        sqlsc += " datetime ";
+                        break;
+                    case "System.String":
+                    default:
+                        sqlsc += string.Format(" nvarchar({0}) ", table.Columns[i].MaxLength == -1 ? "max" : table.Columns[i].MaxLength.ToString());
+                        break;
+                }
+                if (table.Columns[i].AutoIncrement)
+                    sqlsc += " IDENTITY(" + table.Columns[i].AutoIncrementSeed.ToString() + "," + table.Columns[i].AutoIncrementStep.ToString() + ") ";
+                if (!table.Columns[i].AllowDBNull)
+                    sqlsc += " NOT NULL ";
+                sqlsc += ",";
+            }
+            return sqlsc.Substring(0, sqlsc.Length - 1) + "\n)";
+        }
+
+        public static void CreateTABLEScript(string tableName)
+        {
+
+            string queryString = tableName;
+            string connectionString = @"Data Source=SUBBUCHAND19\SQLEXPRESS;" + "Initial Catalog=AdventureWorks2019;" + "Integrated Security=SSPI;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        
+                    }
+                }
+                finally
+                {
+                    // Always call Close when done reading.
+                    reader.Close();
+                }
+            }
         }
 
     }

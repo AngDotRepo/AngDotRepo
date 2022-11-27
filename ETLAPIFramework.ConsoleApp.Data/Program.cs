@@ -12,7 +12,7 @@ namespace ETLAPIFramework.ConsoleApp.Data
             List<string> urllist = new List<string>();
 
             urllist.Add("https://jsonplaceholder.typicode.com/todos");
-            //urllist.Add("https://fakestoreapi.com/products");
+            urllist.Add("https://fakestoreapi.com/products");
 
             foreach (string url in urllist)
             {
