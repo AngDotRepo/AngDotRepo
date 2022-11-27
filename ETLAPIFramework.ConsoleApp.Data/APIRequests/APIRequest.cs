@@ -27,9 +27,6 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
 
             using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
             {
-                //1st//https://jsonplaceholder.typicode.com/todos
-                //2nd//https://fakestoreapi.com/products/1
-
                 client.BaseAddress = new Uri(url);
 
                 HttpResponseMessage response = client.GetAsync(url).Result;
