@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dwglTe8BwabTuOcpuBsqrZrl82GyO1IVO/3sSuR8XYwYGoe3FkeTGokzwCw1a6/s75M/G9tqMD1IV43IED+1Vg==",
+  "dgSpecHash": "5PxmOSyU+a83V1NID5QyekHkLvH3N/E7Amd1wMUYGScRGu7GKEWC+wyafuCiM9DeuzOMSIynBBdbBAZfJvQypg==",
   "success": true,
-  "projectFilePath": "C:\\Game\\AngDotRepo-localdev\\AngDotRepo-localdev\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\v-surg\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

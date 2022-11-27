@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Game\\AngDotRepo-localdev\\AngDotRepo-localdev\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj": {}
+    "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj": {}
   },
   "projects": {
-    "C:\\Game\\AngDotRepo-localdev\\AngDotRepo-localdev\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj": {
+    "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Game\\AngDotRepo-localdev\\AngDotRepo-localdev\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
+        "projectUniqueName": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
         "projectName": "StudentAttendenceManagement",
-        "projectPath": "C:\\Game\\AngDotRepo-localdev\\AngDotRepo-localdev\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
-        "packagesPath": "C:\\Users\\v-surg\\.nuget\\packages\\",
-        "outputPath": "C:\\Game\\AngDotRepo-localdev\\AngDotRepo-localdev\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\obj\\",
+        "projectPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
+        "packagesPath": "C:\\Users\\v-subc\\.nuget\\packages\\",
+        "outputPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\v-surg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\v-subc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,12 +49,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.25, 3.1.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -66,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.214\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,7 +10,13 @@
         }
       ],
       "UpstreamPathTemplate": "/apigateway/AttendanceService",
-      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ],
+
+      "AuthenticationOptions": {
+        //"AuthenticationProviderKey": "AzureADJwtBearer",
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "DownstreamPathTemplate": "/api/StudentAdmission",
@@ -22,7 +28,13 @@
         }
       ],
       "UpstreamPathTemplate": "/apigateway/AdmissionService",
-      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ],
+
+      "AuthenticationOptions": {
+        //"AuthenticationProviderKey": "AzureADJwtBearer",
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     }
   ]
 }
