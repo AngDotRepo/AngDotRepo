@@ -14,16 +14,16 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
 {
     public static class APIRequest
     {
-        public static void GetAPIRequest(string url)
+        public static void GetAPIRequest(string url, string tableName)
         {
 
             Console.WriteLine("Making API Call...");
 
-            if (url.Contains("/1"))
-            {
-                Console.WriteLine("URL Contain Some Numbers...Hence Please check...API Call...");
-                Environment.Exit(0);
-            }
+            //if (url.Contains("/1"))
+            //{
+            //    Console.WriteLine("URL Contain Some Numbers...Hence Please check...API Call...");
+            //    Environment.Exit(0);
+            //}
 
             using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
             {
@@ -50,7 +50,7 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
 
                 ConvertListObjectToDataTable listtodt = new ConvertListObjectToDataTable();
 
-                var users = MyDynamic[0];
+                var users = MyDynamic;
 
                 var jTokens = users.Children();
 
@@ -70,13 +70,13 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
 
                 dt = ToDictionary(EmployeeList);
 
-                string tableName = CreateTABLE("[dbo].[testtable]", dt);
+                string tablenameScript = CreateTABLE(tableName, dt);
 
-                CreateTABLEScript(tableName);
+                CreateTABLEExecutescript(tablenameScript);
 
-                loadDataTableToSQL.DeleteRecords("[dbo].[testtable]");
+                loadDataTableToSQL.DeleteRecords(tableName);
 
-                loadDataTableToSQL.BulkInsert(dt, "[dbo].[testtable]");
+                loadDataTableToSQL.BulkInsert(dt, tableName);
 
             }
         }
@@ -137,7 +137,7 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
             return sqlsc.Substring(0, sqlsc.Length - 1) + "\n)";
         }
 
-        public static void CreateTABLEScript(string tableName)
+        public static void CreateTABLEExecutescript(string tableName)
         {
 
             string queryString = tableName;
