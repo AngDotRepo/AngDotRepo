@@ -499,11 +499,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Github\\ETLAPIFramework.ConsoleApp.Data\\ETLAPIFramework.ConsoleApp.Data.csproj",
+      "projectUniqueName": "C:\\Github\\AngDotRepo\\ETLAPIFramework.ConsoleApp.Data\\ETLAPIFramework.ConsoleApp.Data.csproj",
       "projectName": "ETLAPIFramework.ConsoleApp.Data",
-      "projectPath": "C:\\Github\\ETLAPIFramework.ConsoleApp.Data\\ETLAPIFramework.ConsoleApp.Data.csproj",
+      "projectPath": "C:\\Github\\AngDotRepo\\ETLAPIFramework.ConsoleApp.Data\\ETLAPIFramework.ConsoleApp.Data.csproj",
       "packagesPath": "C:\\Users\\v-subc\\.nuget\\packages\\",
-      "outputPath": "C:\\Github\\ETLAPIFramework.ConsoleApp.Data\\obj\\",
+      "outputPath": "C:\\Github\\AngDotRepo\\ETLAPIFramework.ConsoleApp.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\v-subc\\AppData\\Roaming\\NuGet\\NuGet.Config",
