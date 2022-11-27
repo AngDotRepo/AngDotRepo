@@ -1,5 +1,6 @@
 ﻿using ETLAPIFramework.ConsoleApp.Data.APIRequests;
 using System;
+using System.Collections.Generic;
 
 namespace ETLAPIFramework.ConsoleApp.Data
 {
@@ -7,7 +8,18 @@ namespace ETLAPIFramework.ConsoleApp.Data
     {
         static void Main(string[] args)
         {
-            APIRequest.GetAPIRequest();
+
+            List<string> urllist = new List<string>();
+
+            urllist.Add("https://jsonplaceholder.typicode.com/todos");
+            //urllist.Add("https://fakestoreapi.com/products");
+
+            foreach (string url in urllist)
+            {
+                APIRequest.GetAPIRequest(url);
+            }
+
+            
         }
     }
 }
