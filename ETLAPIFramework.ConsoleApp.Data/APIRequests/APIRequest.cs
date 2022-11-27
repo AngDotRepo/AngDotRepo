@@ -16,14 +16,7 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
     {
         public static void GetAPIRequest(string url, string tableName)
         {
-
             Console.WriteLine("Making API Call...");
-
-            //if (url.Contains("/1"))
-            //{
-            //    Console.WriteLine("URL Contain Some Numbers...Hence Please check...API Call...");
-            //    Environment.Exit(0);
-            //}
 
             using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
             {
@@ -50,8 +43,6 @@ namespace ETLAPIFramework.ConsoleApp.Data.APIRequests
                 var users = MyDynamic;
 
                 var jTokens = users.Children();
-
-                List<string> stringlists = new List<string>();
 
                 Dictionary<string, string> EmployeeList = new Dictionary<string, string>();
 

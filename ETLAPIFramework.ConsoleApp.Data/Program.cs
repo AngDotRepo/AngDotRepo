@@ -9,10 +9,6 @@ namespace ETLAPIFramework.ConsoleApp.Data
     {
         static void Main(string[] args)
         {
-
-            List<string> urllist = new List<string>();
-
-
             List<Dictionary<string, string>> keyValuePairs = new List<Dictionary<string, string>>();
 
             Dictionary<string, string> urlTableList1 = new Dictionary<string, string>();
@@ -33,8 +29,6 @@ namespace ETLAPIFramework.ConsoleApp.Data
 
                     APIRequest.GetAPIRequest(url, table);
                 }
-
-                //APIRequest.GetAPIRequest(keyValuePair.Keys,keyValuePair.Values);
             }
 
         }
