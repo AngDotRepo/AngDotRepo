@@ -160,11 +160,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp.csproj",
+      "projectUniqueName": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp.csproj",
       "projectName": "SchoolManagementSystemConsoleApp",
-      "projectPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp.csproj",
+      "projectPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp.csproj",
       "packagesPath": "C:\\Users\\v-subc\\.nuget\\packages\\",
-      "outputPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp\\obj\\",
+      "outputPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystemConsoleApp\\SchoolManagementSystemConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\v-subc\\AppData\\Roaming\\NuGet\\NuGet.Config",

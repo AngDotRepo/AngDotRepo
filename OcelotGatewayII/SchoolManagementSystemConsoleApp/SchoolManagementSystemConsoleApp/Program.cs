@@ -24,7 +24,7 @@ namespace SchoolManagementSystemConsoleApp
         private static void GetToken()
         {
             string id_token = null;
-            var request = (HttpWebRequest)WebRequest.Create("https://login.windows.net/" + "microsoft.onmicrosoft.com" + "/oauth2/token");
+            var request = (HttpWebRequest)WebRequest.Create("https://login.windows.net/" + "aegiscompany.onmicrosoft.com" + "/oauth2/token");
 
             string FormData(string key, string val)
             {
@@ -35,9 +35,9 @@ namespace SchoolManagementSystemConsoleApp
 
             string data = "";
             data += FormData("grant_type", "Authorization_Code");
-            data += FormData("client_secret", "pBU8Q~q~iSRrqQO8~v3wt66SlcZ1DnTQViOIKcNl");
-            data += FormData("Client_id", "fae54d7a-4774-4a7c-855f-2cecff201135");
-            data += FormData("Code", "0.ARoAv4j5cvGGr0GRqy180BHbR3pN5fp0R3xKhV8s7P8gETU4AF8.AgABAAIAAAD--DLA3VO7QrddgJg7WevrAgDs_wQA9P_ejqZDiEO3Jq0YVdDVcm4WdxbuplDCqBbY3Z2F6RWcOgzeuvtPjSBR7vHKeAVxdl0Cbm2laY_GfjouT8WCty3iIsuGmVgM4bvh_pxu0CMDBkyd-5FAd2FVaui9n5MFKEIuNJyfXHiWy0YXIWz_Q7NPK7z6SuX7vRRp9GOXMAM4qbPcPCu4SAWLzQUp-ZoGQxSdP53khtuUoEDcxmPHrf1nVcpQVOkXFoXEDfnVRuxkoT-Ffk4ynYk2oMv7oDc7J4WZairDcposfquGfCArV8Fn_F5-J8HDoV_eEpt-0kirCFHCDduZMmxgpcs34Bf5YOCCqUpNNaYnP_3_EqpwBDMzmIzY9tna-WHZMrmnpN-aMC_ZntdvmgRir6MTq8YRo9DsC0QdTd9S3H7A0-DxTzh3DZvkrWbUqqaCqXETLGefvq-uFf1Kubux_E3uO4kK_Ehc_IuM0uz6F0_vJ5pellNhbUJ8s1fv8uboP0-lde-ghI2BYF8L0RTzFQEQ5WG7UlS_S5TbkBK5_oV4oYQzN9Bgx69TYCoE_CoLQ8_KdVMCkNNBNpwaBnv-hvNjQo1hDmHBKAxQyzcWD7hPLQwFfumge8HOghUChEzvKqrajnobA1b3wyOyMEVDQgKx2M8QXoeTjfX9pF0mzNzzmIgwlu7yyRxEYvZWPcglvm6glQKkDto3lRXOL9r5vptsPlfn8vxP0_V-o40yATLtZJr80HawOG0HaR_E51WBjWDqGP7TH0Z74K3vCbipwQ2WukyaC6MC2ZLs2Tbu5giP1Lhd8Rt1c6PIq7JGVmuRLOQCzulYQK5nIYQzwdR8Rl0Nbt3Z6T9PkndaO05HO1zwfe34shU9ba8iAuCgCsJzhhefQeFdc7Cvtg");
+            data += FormData("client_secret", "f4E8Q~awuwLguMagVlKriMNma0nVplGWrAOUmby2");
+            data += FormData("Client_id", "4a60585e-3399-4bf8-8c2b-74a9817dc3be");
+            data += FormData("Code", "0.ARoAW_I26FrXtUyGXv9SvaYt_15YYEqZM_hLjCt0qYF9w744AF8.AgABAAIAAAD--DLA3VO7QrddgJg7WevrAgDs_wQA9P8CRPo262HWW5bx4KLMJS8EC7BDquWbh6CjTXuziR-YGVc6nv6fOILCl8YRuVWgj0Cl3gfH94w02B-KXSOGP2UqFnmleT7aTwddoegiOgvLZuT89Gr9o-ZhsMAp6izah8xETA-RaFFRvUmwxwibcpkhVCxtP9qNFREFrIAvtV0nza54pqxujRPxgbK2QT0rzp6qDAfhjLYcHeAcmn5_yk98hsay-GxvC9oslZ0rrA-5-T4pez_bko8VMG5BHzuHjQFZ3UB8eY5M0yYFJZxaG1W4QPZXqxeM4FY3kW8MQDW0Bw8Eu6l3Qn7dQPyEKjOpvRGx5SqLCH-rnGauuQvdWmWbU6xBfp0LUqfTQTuyjlcbgdVrxF6H_2YZt2fkyofzOTd0I86WEPukFbXgHNB8JREiVNYGlwot_xvpVxfaIPAgS4SL22ht7PJWqlU_9fShra3nh8zi7ocRW0S58ZLkUWZnCoXbIW7SqOVPtiJoy7B-XGtTEeqNCYtMeI8Anuo4GWweP3rPVcjIdnetqRZKxsVyaEUKZ4y_bS1DFnOYgd-SslA4LH7tAIudhEUcz8Te3JjSkL0MXL8DbQ");
 
             data = data.Substring(0, data.Length - 1);
 
