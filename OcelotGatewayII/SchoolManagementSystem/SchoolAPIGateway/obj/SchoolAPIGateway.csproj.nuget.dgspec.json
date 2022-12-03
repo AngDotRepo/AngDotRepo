@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj": {}
+    "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj": {}
   },
   "projects": {
-    "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj": {
+    "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj",
+        "projectUniqueName": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj",
         "projectName": "SchoolAPIGateway",
-        "projectPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj",
+        "projectPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\SchoolAPIGateway.csproj",
         "packagesPath": "C:\\Users\\v-subc\\.nuget\\packages\\",
-        "outputPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\obj\\",
+        "outputPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\SchoolAPIGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\v-subc\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -32,11 +32,11 @@ namespace SchoolAPIGateway
             // Azure AD
             services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, jwtOptions =>
             {
-                jwtOptions.Audience = "fae54d7a-4774-4a7c-855f-2cecff201135";
-                jwtOptions.Authority = "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47";
+                jwtOptions.Audience = "same as client id";
+                jwtOptions.Authority = "https://login.microsoftonline.com/{tenant}";
                 jwtOptions.RequireHttpsMetadata = false;
                 jwtOptions.Events = new JwtBearerEvents { OnAuthenticationFailed = AuthenticationFailed, OnTokenValidated = AuthenticationTokenValidated };
-                jwtOptions.TokenValidationParameters.ValidIssuer = "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0";
+                jwtOptions.TokenValidationParameters.ValidIssuer = "https://login.microsoftonline.com/{tenant}/v2.0";
                 jwtOptions.TokenValidationParameters.ValidateAudience = false;
                 jwtOptions.TokenValidationParameters.ValidateIssuer = false;
             });

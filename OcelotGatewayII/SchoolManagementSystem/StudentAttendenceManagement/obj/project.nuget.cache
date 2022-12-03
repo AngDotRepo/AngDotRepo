@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kcgd7VFReBNX4muwN/1ExgmRYgl5C0iyocJh+0U/bflkXd6cA0yLdTNGCGochEY9rjfVsqL01L1tZ5nHkaf9nQ==",
+  "dgSpecHash": "B5/H3401/DHmMlPplzsWF6Jm8yWICGHlWCRfGKzoaWPbAyXNu5zS4EMs4Dam111HMfXQPiw2gSzb/9UhQzVm7g==",
   "success": true,
-  "projectFilePath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
+  "projectFilePath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

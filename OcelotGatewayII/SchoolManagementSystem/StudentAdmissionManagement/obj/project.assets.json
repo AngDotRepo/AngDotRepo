@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
+      "projectUniqueName": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
       "projectName": "StudentAdmissionManagement",
-      "projectPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
+      "projectPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
       "packagesPath": "C:\\Users\\v-subc\\.nuget\\packages\\",
-      "outputPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\obj\\",
+      "outputPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\v-subc\\AppData\\Roaming\\NuGet\\NuGet.Config",

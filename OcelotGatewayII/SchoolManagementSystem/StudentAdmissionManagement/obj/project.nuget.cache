@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5PxmOSyU+a83V1NID5QyekHkLvH3N/E7Amd1wMUYGScRGu7GKEWC+wyafuCiM9DeuzOMSIynBBdbBAZfJvQypg==",
+  "dgSpecHash": "rZGyMDuLDF1u27ljgctxB5uEAqieqactHmn93ndfG/OrzHaaGpgp8gYFBkDVSkhWoivAZY/Biy2SZHLXbrZ0Cw==",
   "success": true,
-  "projectFilePath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
+  "projectFilePath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAdmissionManagement\\StudentAdmissionManagement.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

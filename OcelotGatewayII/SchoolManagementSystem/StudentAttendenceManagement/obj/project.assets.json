@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
+      "projectUniqueName": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
       "projectName": "StudentAttendenceManagement",
-      "projectPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
+      "projectPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\StudentAttendenceManagement.csproj",
       "packagesPath": "C:\\Users\\v-subc\\.nuget\\packages\\",
-      "outputPath": "C:\\Github\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\obj\\",
+      "outputPath": "C:\\Github\\AngDotRepo\\OcelotGatewayII\\SchoolManagementSystem\\StudentAttendenceManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\v-subc\\AppData\\Roaming\\NuGet\\NuGet.Config",
