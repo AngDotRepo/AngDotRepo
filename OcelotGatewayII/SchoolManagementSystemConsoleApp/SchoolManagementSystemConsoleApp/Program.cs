@@ -25,7 +25,7 @@ namespace SchoolManagementSystemConsoleApp
             string token = GetAccessToken();
         }
 
-        #region Get an authentication access token via client credentials
+        #region Get an authentication access token via client credentials - Management Core
         [Obsolete]
         static string GetAccessToken()
         {
@@ -35,6 +35,34 @@ namespace SchoolManagementSystemConsoleApp
             {
                 string authority = "https://login.microsoftonline.com/e836f25b-d75a-4cb5-865e-ff52bda62dff";
                 string resrouce = "https://management.core.windows.net";
+                string clientId = "4a60585e-3399-4bf8-8c2b-74a9817dc3be";
+                string secret = "_SY8Q~1AzUvOI1n0OxfHOj-nfZOdTY6CgyBs6dwK";
+                ClientCredential credential = new ClientCredential(clientId, secret);
+                AuthenticationContext authContext = new AuthenticationContext(authority);
+
+                var token = authContext.AcquireTokenAsync(resrouce, credential).Result.AccessToken;
+                return token;
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+
+            return tokenn;
+        }
+        #endregion
+
+        #region Get an authentication access token via client credentials - Graph
+        [Obsolete]
+        static string GetAccessTokenGraph()
+        {
+            string tokenn = null;
+
+            try
+            {
+                string authority = "https://login.microsoftonline.com/e836f25b-d75a-4cb5-865e-ff52bda62dff";
+                string resrouce = "https://graph.microsoft.com";
                 string clientId = "4a60585e-3399-4bf8-8c2b-74a9817dc3be";
                 string secret = "_SY8Q~1AzUvOI1n0OxfHOj-nfZOdTY6CgyBs6dwK";
                 ClientCredential credential = new ClientCredential(clientId, secret);
